@@ -5,7 +5,7 @@ package demo;
 option java_multiple_files = true;
 option java_package = "cn.itlemon.best.arthas.proto";
 
-message User {
+message UserMsg {
 
   string username = 1;
   string sex = 2;
