@@ -32,7 +32,9 @@
                 <version>0.6.1</version>
                 <configuration>
                     <!-- 这个配置需要根据实际情况修改 -->
-                    <protocExecutable>/opt/homebrew/bin/protoc</protocExecutable>
+                    <!-- mac mini M1版本是 /opt/homebrew/bin/protoc -->
+                    <!-- intel版本是 /usr/local/bin/protoc -->
+                    <protocExecutable>/usr/local/bin/protoc</protocExecutable>
                 </configuration>
                 <executions>
                     <execution>
