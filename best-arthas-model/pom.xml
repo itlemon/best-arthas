@@ -26,25 +26,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.xolstice.maven.plugins</groupId>
-                <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.6.1</version>
-                <configuration>
-                    <!-- 这个配置需要根据实际情况修改 -->
-                    <!-- mac mini M1版本是 /opt/homebrew/bin/protoc -->
-                    <!-- intel版本是 /usr/local/bin/protoc -->
-                    <protocExecutable>/usr/local/bin/protoc</protocExecutable>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
