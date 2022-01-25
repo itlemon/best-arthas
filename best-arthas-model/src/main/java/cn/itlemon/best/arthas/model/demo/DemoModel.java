@@ -1,5 +1,7 @@
 package cn.itlemon.best.arthas.model.demo;
 
+import java.util.Date;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,5 +17,6 @@ public class DemoModel {
 
     private String password;
 
+    private Date date;
 
 }

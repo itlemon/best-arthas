@@ -5,3 +5,9 @@ server:
       force: true
       charset: UTF-8
       enabled: true
+
+# Spring配置
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true

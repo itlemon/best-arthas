@@ -1,5 +1,7 @@
 package cn.itlemon.best.arthas.demo.controller;
 
+import java.util.Date;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +25,8 @@ public class DemoController {
     public DemoModel index3() {
         DemoModel demoModel = new DemoModel();
         demoModel.setUsername("江平平");
-        demoModel.setPassword("123");
+        demoModel.setPassword(null);
+        demoModel.setDate(null);
         return demoModel;
     }
 

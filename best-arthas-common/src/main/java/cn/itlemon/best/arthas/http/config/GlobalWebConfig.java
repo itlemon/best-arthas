@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -11,6 +12,8 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cn.itlemon.best.arthas.http.advice.ResponseResultInterceptor;
 
@@ -22,6 +25,9 @@ import cn.itlemon.best.arthas.http.advice.ResponseResultInterceptor;
  */
 @Configuration
 public class GlobalWebConfig extends WebMvcConfigurationSupport {
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
@@ -48,6 +54,7 @@ public class GlobalWebConfig extends WebMvcConfigurationSupport {
         // ...可以按照项目实际需要，新增多个
         converter.setDefaultCharset(StandardCharsets.UTF_8);
         converter.setSupportedMediaTypes(mediaTypes);
+        converter.setObjectMapper(objectMapper);
         return converter;
     }
 
