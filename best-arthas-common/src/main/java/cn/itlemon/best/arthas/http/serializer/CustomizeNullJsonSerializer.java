@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 /**
  * 自定义的Null值序列化器
  *
- * @author jiangpingping <jiangpingping@kuaishou.com>
+ * @author itlemon <lemon_jiang@aliyun.com>
  * Created on 2022-01-25
  */
 public class CustomizeNullJsonSerializer {

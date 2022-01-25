@@ -19,4 +19,17 @@ public class DemoModel {
 
     private Date date;
 
+    private Demo2Model model;
+
+    private Integer age;
+
+    private Integer[] ages;
+
+    private Boolean flag;
+
+    private class Demo2Model {
+        String name;
+        String pass;
+    }
+
 }

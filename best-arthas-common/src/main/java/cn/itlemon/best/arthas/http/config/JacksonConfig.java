@@ -29,7 +29,7 @@ public class JacksonConfig {
         objectMapper.setSerializerFactory(objectMapper.getSerializerFactory()
                 .withSerializerModifier(new CustomizeSerializerModifier()));
 
-        objectMapper.getSerializerProvider().setNullKeySerializer(new CustomizeNullJsonSerializer
+        objectMapper.getSerializerProvider().setNullValueSerializer(new CustomizeNullJsonSerializer
                 .NullObjectJsonSerializer());
         return objectMapper;
     }

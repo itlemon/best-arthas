@@ -26,7 +26,11 @@ public class DemoController {
         DemoModel demoModel = new DemoModel();
         demoModel.setUsername("江平平");
         demoModel.setPassword(null);
-        demoModel.setDate(null);
+        demoModel.setDate(new Date());
+        demoModel.setModel(null);
+        demoModel.setAge(null);
+        demoModel.setAges(null);
+        demoModel.setFlag(null);
         return demoModel;
     }
 
