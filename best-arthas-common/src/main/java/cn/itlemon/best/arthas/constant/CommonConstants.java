@@ -13,4 +13,9 @@ public interface CommonConstants {
      */
     String RESPONSE_RESULT_ANN = "RESPONSE-RESULT-ANN";
 
+    /**
+     * traceId
+     */
+    String HTTP_TRACE_ID = "traceId";
+
 }

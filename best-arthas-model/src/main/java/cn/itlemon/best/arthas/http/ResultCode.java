@@ -29,11 +29,11 @@ public enum ResultCode {
     PARAMS_IS_INVALID(1000, "invalid parameter");
 
     private final int code;
-    private final String msg;
+    private final String desc;
 
-    ResultCode(int code, String msg) {
+    ResultCode(int code, String desc) {
         this.code = code;
-        this.msg = msg;
+        this.desc = desc;
     }
 
 }

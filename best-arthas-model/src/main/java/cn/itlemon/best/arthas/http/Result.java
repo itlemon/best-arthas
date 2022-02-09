@@ -29,7 +29,7 @@ public class Result<T> implements Serializable {
     public static <T> Result<T> success(T data) {
         Result<T> result = new Result<>();
         result.code = ResultCode.SUCCESS.getCode();
-        result.msg = ResultCode.SUCCESS.getMsg();
+        result.msg = ResultCode.SUCCESS.getDesc();
         result.data = data;
         return result;
     }
@@ -37,7 +37,14 @@ public class Result<T> implements Serializable {
     public static <T> Result<T> fail(ResultCode resultCode) {
         Result<T> result = new Result<>();
         result.code = resultCode.getCode();
-        result.msg = resultCode.getMsg();
+        result.msg = resultCode.getDesc();
+        return result;
+    }
+
+    public static <T> Result<T> fail(ResultCode resultCode, String customMsg) {
+        Result<T> result = new Result<>();
+        result.code = resultCode.getCode();
+        result.msg = customMsg;
         return result;
     }
 

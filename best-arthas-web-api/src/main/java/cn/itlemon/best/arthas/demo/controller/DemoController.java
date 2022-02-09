@@ -5,7 +5,9 @@ import java.util.Date;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import cn.itlemon.best.arthas.http.ResultCode;
 import cn.itlemon.best.arthas.http.advice.ResponseResult;
+import cn.itlemon.best.arthas.http.exception.ApiException;
 import cn.itlemon.best.arthas.model.demo.DemoModel;
 
 /**
@@ -31,6 +33,9 @@ public class DemoController {
         demoModel.setAge(null);
         demoModel.setAges(null);
         demoModel.setFlag(null);
+        if (true) {
+            throw new ApiException(ResultCode.BAD_REQUEST);
+        }
         return demoModel;
     }
 
